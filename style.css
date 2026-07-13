@@ -225,6 +225,26 @@ h2.section-title {
   margin: 0;
 }
 
+/* Placeholder cards (e.g. models coming soon) */
+.card.is-placeholder {
+  border-style: dashed;
+  cursor: default;
+}
+
+.card.is-placeholder:hover {
+  border-color: var(--border);
+  transform: none;
+}
+
+.card.is-placeholder .thumb {
+  background: var(--bg);
+  border: 1px dashed var(--border);
+}
+
+.card.is-placeholder p {
+  color: var(--text-muted);
+}
+
 /* Project page specifics */
 .project-hero {
   padding: 56px 0 36px;
