@@ -435,7 +435,7 @@ h2.section-title {
 
 .figure-card img {
   width: 100%;
-  max-width: 460px;
+  max-width: 300px;
   height: auto;
   border-radius: 6px;
   display: inline-block;
