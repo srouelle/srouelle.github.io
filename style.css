@@ -203,7 +203,45 @@ h2.section-title {
   background: var(--accent-soft);
   border-radius: 8px;
   margin-bottom: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.card .thumb svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Mini diagram shapes (card thumbnails) */
+.mini-box {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1.5;
+}
+
+.mini-box-accent {
+  fill: var(--surface);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.mini-arrow {
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.mini-arrow-accent {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.mini-arrowhead { fill: var(--text-muted); }
+.mini-arrowhead-accent { fill: var(--accent); }
 
 .card .card-eyebrow {
   font-family: var(--font-mono);
@@ -223,26 +261,6 @@ h2.section-title {
   font-size: 13.5px;
   color: var(--text-secondary);
   margin: 0;
-}
-
-/* Placeholder cards (e.g. models coming soon) */
-.card.is-placeholder {
-  border-style: dashed;
-  cursor: default;
-}
-
-.card.is-placeholder:hover {
-  border-color: var(--border);
-  transform: none;
-}
-
-.card.is-placeholder .thumb {
-  background: var(--bg);
-  border: 1px dashed var(--border);
-}
-
-.card.is-placeholder p {
-  color: var(--text-muted);
 }
 
 /* Project page specifics */
@@ -298,6 +316,76 @@ h2.section-title {
   font-size: 13px;
   color: var(--text-muted);
   margin: 8px 0 0;
+}
+
+/* Diagram card (replaces media-placeholder once a diagram is added) */
+.diagram-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 18px;
+  margin: 8px 0 0;
+}
+
+.diagram-card svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dg-box {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1.5;
+}
+
+.dg-box-accent {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.dg-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--text-primary);
+}
+
+.dg-text {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  fill: var(--text-secondary);
+}
+
+.dg-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--accent);
+}
+
+.dg-arrow {
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.dg-arrow-dashed {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+  fill: none;
+}
+
+.dg-arrowhead { fill: var(--text-muted); }
+.dg-arrowhead-accent { fill: var(--accent); }
+
+.diagram-caption {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 14px 0 0;
 }
 
 .stage {
