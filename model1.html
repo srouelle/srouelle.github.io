@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="meta-links">
-      <span>Team Project &middot; DSC450 Applied Data Science</span>
+      <span>Team Project</span>
     </div>
   </div>
 </header>
@@ -45,7 +45,7 @@
     <div class="figure-grid">
       <div class="figure-card">
         <img src="almond-fig1-acres-vs-yield.png" alt="Line chart comparing Fresno bearing acres, which rise steadily, against almond yield per acre, which varies year to year, from 2002 to 2022.">
-        <p class="figure-caption">Fresno bearing acres (rising steadily as growers keep planting) vs. almond yield per acre (year-to-year variation), 2002&ndash;2022. This divergence is why yield per acre, not acreage, became the modeling target.</p>
+        <p class="figure-caption">Fresno bearing acres vs. almond yield per acre (year-to-year variation), 2002&ndash;2022. This divergence is why yield per acre, not acreage, became the modeling target.</p>
       </div>
       <div class="figure-card">
         <img src="almond-fig2-chill-vs-yield.png" alt="Scatter plot of winter chill hours between 32 and 45 degrees Fahrenheit against almond yield per acre, with a positive fitted trend line.">
@@ -53,7 +53,7 @@
       </div>
       <div class="figure-card">
         <img src="almond-fig3-correlation-matrix.png" alt="Correlation matrix heatmap of six winter weather features and almond yield per acre.">
-        <p class="figure-caption">Correlation matrix of winter weather features and yield &mdash; shows how tangled the individual predictors are with each other, which makes their combined-model coefficients unstable.</p>
+        <p class="figure-caption">Correlation matrix of winter weather features and yield &mdash; shows how tangled the individual predictors are with each other, which makes their combined model coefficients unstable.</p>
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@
       <h3>approach</h3>
       <p>Combined 21 years (2002&ndash;2022) of hourly NOAA temperature data with USDA yield-per-acre
       figures, engineering winter features like average, minimum, and maximum temperature, temperature
-      variability, freeze hours, and chill hours (32&ndash;45&deg;F). Ran single-feature OLS regressions
+      variability, freeze hours, and chill hours (32&ndash;45&deg;F). Ran single feature OLS regressions
       for each winter feature, then a combined multiple regression across all six, plus a correlation
       matrix to check how the features related to each other and to yield.</p>
     </div>
@@ -88,7 +88,7 @@
     <div class="stage">
       <h3>next steps</h3>
       <p>Future iterations would pull temperature from multiple stations across the county instead of
-      one, replace the simplified chill-hours count with a validated chill-portions model, and add
+      one, replace the simplified chill-hours count with a validated chill portions model, and add
       drivers the current model doesn't capture &mdash; irrigation, orchard age, and variety &mdash; to
       see whether the pattern holds county to county.</p>
     </div>
