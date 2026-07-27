@@ -44,16 +44,16 @@
     <h2 class="section-title">Findings</h2>
     <div class="figure-grid">
       <div class="figure-card">
-        <img src="almond-fig1-acres-vs-yield.png" alt="Line chart comparing Fresno bearing acres, which rise steadily, against almond yield per acre, which varies year to year, from 2002 to 2022.">
-        <p class="figure-caption">Fresno bearing acres vs. almond yield per acre (year-to-year variation), 2002&ndash;2022. This divergence is why yield per acre, not acreage, became the modeling target.</p>
+        <img src="almond1.png" alt="Line chart comparing Fresno bearing acres">
+        <p class="figure-caption">Fresno bearing acres vs. almond yield per acre (year-to-year variation), 2002-2022. This divergence is why yield per acre, not acreage, became the modeling target.</p>
       </div>
       <div class="figure-card">
-        <img src="almond-fig2-chill-vs-yield.png" alt="Scatter plot of winter chill hours between 32 and 45 degrees Fahrenheit against almond yield per acre, with a positive fitted trend line.">
-        <p class="figure-caption">Winter chill hours (32&ndash;45&deg;F) vs. almond yield per acre, with a fitted trend line &mdash; a moderate positive relationship (r = 0.43), in the direction the hypothesis predicted.</p>
+        <img src="almond2.png" alt="Scatter plot of winter chill hours.">
+        <p class="figure-caption">Winter chill hours vs. almond yield per acre, with a fitted trend line - a moderate positive relationship (r = 0.43), in the direction the hypothesis predicted.</p>
       </div>
       <div class="figure-card">
-        <img src="almond-fig3-correlation-matrix.png" alt="Correlation matrix heatmap of six winter weather features and almond yield per acre.">
-        <p class="figure-caption">Correlation matrix of winter weather features and yield &mdash; shows how tangled the individual predictors are with each other, which makes their combined model coefficients unstable.</p>
+        <img src="almond3x.png" alt="Correlation matrix heatmap.">
+        <p class="figure-caption">Correlation matrix of winter weather features and yield shows how tangled the individual predictors are with each other, which makes their combined model coefficients unstable.</p>
       </div>
     </div>
   </div>
@@ -66,30 +66,30 @@
       <h3>problem</h3>
       <p>Winter temperatures in California's Central Valley are trending warmer, and almond trees need
       enough winter cold (chill) during dormancy to bloom evenly. The team wanted to know whether a
-      measurable winter signal &mdash; temperature or accumulated chill &mdash; could serve as an early,
+      measurable winter signal temperature or accumulated chill could serve as an early,
       observable indicator of relative almond yield in Fresno County before harvest.</p>
     </div>
     <div class="stage">
       <h3>approach</h3>
-      <p>Combined 21 years (2002&ndash;2022) of hourly NOAA temperature data with USDA yield-per-acre
+      <p>Combined 21 years (2002-2022) of hourly NOAA temperature data with USDA yield-per-acre
       figures, engineering winter features like average, minimum, and maximum temperature, temperature
-      variability, freeze hours, and chill hours (32&ndash;45&deg;F). Ran single feature OLS regressions
+      variability, freeze hours, and chill hours (32-45F). Ran single feature OLS regressions
       for each winter feature, then a combined multiple regression across all six, plus a correlation
       matrix to check how the features related to each other and to yield.</p>
     </div>
     <div class="stage">
       <h3>results</h3>
       <p>Winter conditions did move with yield: maximum winter temperature was the strongest single
-      predictor (R&sup2; = 0.29), and chill hours pointed in the hypothesized direction with a moderate
+      predictor (R2 = 0.29), and chill hours pointed in the hypothesized direction with a moderate
       positive correlation (r = 0.43). The combined six-feature model explained a meaningful share of
-      year-to-year yield variation (adjusted R&sup2; = 0.59, p = 0.003) &mdash; a real signal, but not
+      year-to-year yield variation (adjusted R2 = 0.59, p = 0.003) a real signal, but not
       clean or strong enough on its own to serve as a precise forecast.</p>
     </div>
     <div class="stage">
       <h3>next steps</h3>
       <p>Future iterations would pull temperature from multiple stations across the county instead of
-      one, replace the simplified chill-hours count with a validated chill portions model, and add
-      drivers the current model doesn't capture &mdash; irrigation, orchard age, and variety &mdash; to
+      one, replace the simplified chill hours count with a validated chill portions model, and add
+      drivers the current model doesn't capture irrigation, orchard age, and variety to
       see whether the pattern holds county to county.</p>
     </div>
     <a class="back-link" href="models.html">&larr; back to all models</a>
