@@ -429,11 +429,16 @@ h2.section-title {
   padding: 16px;
 }
 
+.figure-card {
+  text-align: center;
+}
+
 .figure-card img {
   width: 100%;
+  max-width: 460px;
   height: auto;
   border-radius: 6px;
-  display: block;
+  display: inline-block;
   border: 1px solid var(--border);
 }
 
@@ -443,6 +448,7 @@ h2.section-title {
   color: var(--text-muted);
   margin: 12px 4px 0;
   line-height: 1.5;
+  text-align: left;
 }
 
 .stage {
