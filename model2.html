@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Model Two - Samantha Rouelle</title>
+<title>Traffic Flow &amp; Air Quality - Samantha Rouelle</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,14 +23,77 @@
 <header class="project-hero">
   <div class="wrap">
     <p class="eyebrow">model two</p>
-    <h1>Model Two</h1>
-    <p class="summary">Details coming soon.</p>
+    <h1>Traffic Flow &amp; Air Quality</h1>
+    <p class="summary">Modeling whether hourly freeway traffic in Los Angeles and Ventura counties predicts NO&#8322; air pollution levels, comparing a Random Forest regressor against an LSTM time-series network.</p>
+    <div class="meta-row">
+      <div class="tags">
+        <span class="tag">python</span>
+        <span class="tag">random forest</span>
+        <span class="tag">lstm / tensorflow</span>
+        <span class="tag">time series</span>
+      </div>
+    </div>
+    <div class="meta-links">
+      <span>Team Project &middot; DSC450 Applied Data Science</span>
+    </div>
   </div>
 </header>
 
 <section class="block">
   <div class="wrap">
-    <div class="media-placeholder">Project details coming soon!</div>
+    <h2 class="section-title">Findings</h2>
+    <div class="figure-grid">
+      <div class="figure-card">
+        <img src="air1.png" alt="Bar chart of Random Forest feature importance scores for predicting NO2, ranking total traffic flow, average speed, month, hour, and weekend flag.">
+        <p class="figure-caption">Random Forest feature importance for predicting NO&#8322; &mdash; total traffic flow and average speed came out virtually tied as the strongest predictors, followed closely by month, then hour, with weekday/weekend mattering least.</p>
+      </div>
+      <div class="figure-card">
+        <img src="air2.png" alt="Bar chart comparing average NO2 levels on weekdays versus weekends, with weekdays higher.">
+        <p class="figure-caption">Average NO&#8322; by day type &mdash; weekday levels run noticeably higher than weekend levels, consistent with the traffic-linked hypothesis.</p>
+      </div>
+      <div class="figure-card">
+        <img src="air3.png" alt="Scatter plot of morning rush hour traffic volume against average NO2, with a positive fitted trend line.">
+        <p class="figure-caption">Morning rush hour (7&ndash;9 AM) traffic volume vs. NO&#8322;, with a fitted trend line &mdash; a clear positive relationship during peak commute hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">Overview</h2>
+    <div class="stage">
+      <h3>problem</h3>
+      <p>Traffic congestion and air pollution are both persistent problems in large metro areas, and
+      the two are often assumed to be linked. The team wanted to know whether hourly and daily patterns
+      in freeway traffic volume actually correspond to changes in air quality across Los Angeles and
+      Ventura counties, hypothesizing that higher traffic volume tracks with higher NO&#8322; and that
+      weekdays run higher than weekends.</p>
+    </div>
+    <div class="stage">
+      <h3>approach</h3>
+      <p>Merged hourly 2022&ndash;2023 freeway traffic data (Caltrans PeMS District 7 &mdash; total flow
+      and average speed from roughly 1,900 mainline detectors) with EPA Air Quality System NO&#8322;
+      readings for the same counties. Trained two models on the same features (traffic flow, average
+      speed, weekend flag, hour, month): a Random Forest regressor to surface feature importance and
+      non-linear relationships, and an LSTM time-series network to account for pollution lingering from
+      one hour into the next.</p>
+    </div>
+    <div class="stage">
+      <h3>results</h3>
+      <p>Both models found a measurable relationship between traffic and NO&#8322;. The Random Forest
+      explained about 32% of NO&#8322; variation (R&sup2; = 0.32, RMSE = 5.84) using only traffic and
+      time features. The LSTM improved on that with a lower RMSE (5.76), meaning treating pollution as a
+      lingering, hour-to-hour process predicts better than treating each hour independently. Total
+      traffic flow and average speed came out as the two strongest predictors &mdash; essentially tied
+      &mdash; and weekday NO&#8322; ran higher than weekend NO&#8322;, as hypothesized.</p>
+    </div>
+    <div class="stage">
+      <h3>next steps</h3>
+      <p>Next iterations would bring in weather variables the current model doesn't capture &mdash; wind
+      speed, humidity, marine layer inversions &mdash; test whether the pattern holds outside Caltrans
+      District 7, and extend the LSTM's sequence window to see how much further it can reduce error.</p>
+    </div>
     <a class="back-link" href="models.html">&larr; back to all models</a>
   </div>
 </section>
