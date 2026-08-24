@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="meta-links">
-      <span>Independent Project &middot; DSC355 Predictive Analytics</span>
+      <span>Independent Predictive Analytics Project</span>
     </div>
   </div>
 </header>
@@ -45,15 +45,15 @@
     <div class="figure-grid">
       <div class="figure-card">
         <img src="crime1.png" alt="Horizontal bar chart showing the distribution of CrimeAgainst categories, with Property far outweighing Person and Society.">
-        <p class="figure-caption">Class distribution of the raw crime data &mdash; Property-related incidents outnumber Person and Society incidents by a wide margin, which turned out to be the central challenge for the model: without correction it just learns to guess "Property" every time.</p>
+        <p class="figure-caption">Class distribution of the raw crime data - Property-related incidents outnumber Person and Society incidents by a wide margin, which turned out to be the central challenge for the model: without correction it just learns to guess "Property" every time.</p>
       </div>
       <div class="figure-card">
         <img src="crime2.png" alt="Bar chart of number of incidents by time of day, showing Night lowest, Morning higher, and Afternoon and Evening highest and roughly tied.">
-        <p class="figure-caption">Incident volume by time block &mdash; crime activity climbs steadily from night into morning and peaks in the afternoon and evening, which is what motivated using time block (rather than raw hour) as a model feature.</p>
+        <p class="figure-caption">Incident volume by time block - crime activity climbs steadily from night into morning and peaks in the afternoon and evening, which is what motivated using time block (rather than raw hour) as a model feature.</p>
       </div>
       <div class="figure-card">
         <img src="crime3.png" alt="Screenshot of the deployed Streamlit dashboard showing a prediction for South Portland on a Monday afternoon, with a bar chart and exact probability table for Financial, Property, Societal, and Violent crime.">
-        <p class="figure-caption">The live dashboard in action &mdash; for South Portland on a Monday afternoon, the model puts Property Crime as most likely (46.2%), followed by Financial Crime (38.2%), Violent Crime (15.6%), and Societal Crime (under 1%).</p>
+        <p class="figure-caption">The live dashboard in action - for South Portland on a Monday afternoon, the model puts Property Crime as most likely (46.2%), followed by Financial Crime (38.2%), Violent Crime (15.6%), and Societal Crime (under 1%).</p>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
     <h2 class="section-title">Overview</h2>
     <div class="stage">
       <h3>problem</h3>
-      <p>Portland's open crime dataset (2015&ndash;2024, roughly 560,000 logged incidents) records what happened, where, and when, but doesn't surface it in a way anyone could actually plan around. The goal was to turn that raw log into something usable: given a day of the week and a time block, which neighborhoods are more likely to see which kind of crime, and by how much.</p>
+      <p>Portland's open crime dataset (2015-2024, roughly 560,000 logged incidents) records what happened, where, and when, but doesn't surface it in a way anyone could actually plan around. The goal was to turn that raw log into something usable: given a day of the week and a time block, which neighborhoods are more likely to see which kind of crime, and by how much.</p>
     </div>
     <div class="stage">
       <h3>approach</h3>
