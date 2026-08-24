@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Traffic Flow &amp; Air Quality - Samantha Rouelle</title>
+<title>Traffic Flow &amp; Air Quality-Samantha Rouelle</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="meta-links">
-      <span>Team Project &middot; DSC450 Applied Data Science</span>
+      <span>Team Applied Data Science Project</span>
     </div>
   </div>
 </header>
@@ -45,15 +45,15 @@
     <div class="figure-grid">
       <div class="figure-card">
         <img src="air1.png" alt="Bar chart of Random Forest feature importance scores for predicting NO2, ranking total traffic flow, average speed, month, hour, and weekend flag.">
-        <p class="figure-caption">Random Forest feature importance for predicting NO&#8322; &mdash; total traffic flow and average speed came out virtually tied as the strongest predictors, followed closely by month, then hour, with weekday/weekend mattering least.</p>
+        <p class="figure-caption">Random Forest feature importance for predicting NO&#8322;- total traffic flow and average speed came out virtually tied as the strongest predictors, followed closely by month, then hour, with weekday/weekend mattering least.</p>
       </div>
       <div class="figure-card">
         <img src="air2.png" alt="Bar chart comparing average NO2 levels on weekdays versus weekends, with weekdays higher.">
-        <p class="figure-caption">Average NO&#8322; by day type &mdash; weekday levels run noticeably higher than weekend levels, consistent with the traffic-linked hypothesis.</p>
+        <p class="figure-caption">Average NO&#8322; by day type- weekday levels run noticeably higher than weekend levels, consistent with the traffic-linked hypothesis.</p>
       </div>
       <div class="figure-card">
         <img src="air3.png" alt="Scatter plot of morning rush hour traffic volume against average NO2, with a positive fitted trend line.">
-        <p class="figure-caption">Morning rush hour (7&ndash;9 AM) traffic volume vs. NO&#8322;, with a fitted trend line &mdash; a clear positive relationship during peak commute hours.</p>
+        <p class="figure-caption">Morning rush hour (7&ndash;9 AM) traffic volume vs. NO&#8322;, with a fitted trend line- a clear positive relationship during peak commute hours.</p>
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@
     </div>
     <div class="stage">
       <h3>approach</h3>
-      <p>Merged hourly 2022&ndash;2023 freeway traffic data (Caltrans PeMS District 7 &mdash; total flow
+      <p>Merged hourly 2022&ndash;2023 freeway traffic data (Caltrans PeMS District 7- total flow
       and average speed from roughly 1,900 mainline detectors) with EPA Air Quality System NO&#8322;
       readings for the same counties. Trained two models on the same features (traffic flow, average
       speed, weekend flag, hour, month): a Random Forest regressor to surface feature importance and
@@ -85,13 +85,13 @@
       explained about 32% of NO&#8322; variation (R&sup2; = 0.32, RMSE = 5.84) using only traffic and
       time features. The LSTM improved on that with a lower RMSE (5.76), meaning treating pollution as a
       lingering, hour-to-hour process predicts better than treating each hour independently. Total
-      traffic flow and average speed came out as the two strongest predictors &mdash; essentially tied
-      &mdash; and weekday NO&#8322; ran higher than weekend NO&#8322;, as hypothesized.</p>
+      traffic flow and average speed came out as the two strongest predictors- essentially tied
+     - and weekday NO&#8322; ran higher than weekend NO&#8322;, as hypothesized.</p>
     </div>
     <div class="stage">
       <h3>next steps</h3>
-      <p>Next iterations would bring in weather variables the current model doesn't capture &mdash; wind
-      speed, humidity, marine layer inversions &mdash; test whether the pattern holds outside Caltrans
+      <p>Next iterations would bring in weather variables the current model doesn't capture- wind
+      speed, humidity, marine layer inversions- test whether the pattern holds outside Caltrans
       District 7, and extend the LSTM's sequence window to see how much further it can reduce error.</p>
     </div>
     <a class="back-link" href="models.html">&larr; back to all models</a>
